@@ -80,9 +80,9 @@ def add_member():
 def deleting_member(id):
     delete = jackson_family.delete_member(id)
     if delete:
-        return jsonify({'user deleted successfully'}),200
+        return jsonify({'msg': 'User deleted successfully'}),200
     else:
-        return jsonify({'msg': 'User deleted successfully'}), 404
+        return jsonify({'msg': 'Member not found'}), 404
 
 
 # this only runs if `$ python src/app.py` is executed
